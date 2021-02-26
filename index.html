@@ -1,8 +1,210 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memelord</title>
+    <!-- <link rel="stylesheet" href="estilo.css" /> -->
+    <style>
+        body {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToT_Wycsqy8aXwwgpaBCBDYX4Kw0h8ADbR8w&usqp=CAU");
+            background-color: aliceblue;
+            font-family: "Times New Roman";
+        }
+
+        /* --- MODO OSCURO --- */
+        .botonModoOscuro {
+            margin-top: 10px;
+            left: 20px;
+            background: white;
+        }
+
+        html.modoOscuro {
+            filter: invert(100%);
+        }
+
+        html.modoOscuro img {
+            filter: invert(100%);
+        }
+
+        html.modoOscuro button {
+            filter: invert(100%);
+        }
+
+        /* --- ENCABEZADO --- */
+        h1 {
+            font-size: 48pt;
+            background-color: black;
+            border-radius: 5mm;
+            border: solid;
+            border-width: 1.5mm;
+            border-color: rgb(180, 139, 61);
+            text-align: center;
+            color: springgreen;
+        }
+
+        /* --- BARRA DE NAVEGACIÓN --- */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 80px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 80px;
+            text-decoration: none;
+        }
+
+        /* --- NOTICIAS --- */
+
+        .contenedor {
+            grid-template-columns: 33% 33% 33%;
+            /* columnas de 1 tercio*/
+            background-color: #333;
+            padding: 10px;
+            border: 2px solid black;
+            display: grid;
+            margin-bottom: 50px;
+            margin-top: 50px;
+        }
+
+        .noticia {
+            width: 290px;
+            height: 300px;
+            margin: auto;
+            margin-bottom: 30px;
+            text-align: center;
+            line-height: normal;
+            font-size: 14pt;
+        }
+
+        p {
+            color: white;
+        }
+
+        button:active {
+            background: green;
+        }
+
+        img {
+            border-radius: 5mm;
+            width: 290px;
+            height: 165px;
+        }
+
+        .pieDePagina {
+            font-size: 12pt;
+            background-color: #333;
+            text-align: center;
+            color: springgreen;
+        }
+    </style>
+
 </head>
+
 <body>
-<h1> Hola Mundo </h1>
+    <label for="modoOscuro" class="botonModoOscuro">
+        <input id="modoOscuro" value="☾" type="button"
+            onclick="document.documentElement.classList.toggle('modoOscuro')" />
+    </label>
+
+    <h1>Memelord</h1>
+
+    <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Noticias</a></li>
+        <li><a href="#">Usuarios</a></li>
+    </ul>
+
+    <div class="contenedor">
+        <div class="noticia">
+            <img src="https://www.ecestaticos.com/imagestatic/clipping/01a/029/01a029d8f8b9fe8a3988dc6bc1fa6d4b/la-ultima-bala-de-angus-young-lo-nuevo-de-ac-dc-es-un-discazo-que-ya-nadie-esperaba.jpg?mtime=1605267410"
+                alt="" />
+
+            <p>La última bala de Angus. Lo nuevo de AC/DC</p>
+
+            <button>VOTA</button>
+
+        </div>
+        <div class="noticia">
+            <img src="https://en.concerts-metal.com/images/flyers/201909/1567449501.jpeg" alt="" />
+            <p>Motorzombis: Para ingresar en el club de los monstruos</p>
+            <button>VOTA</button>
+        </div>
+        <div class="noticia">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_y1O_D5yWpPmN_hmnftl-Sytj7k1EIWTrnw&usqp=CAU"
+                alt="" />
+            <p>Greta Van Fleet: Ya no sonamos a Led Zeppelin, cansinos.</p>
+            <button>VOTA</button>
+        </div>
+        <div class="noticia">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfT56D0QdhnTVxW4YehKxs72qiBsWU0A_lRg&usqp=CAU"
+                alt="" />
+            <p>TOOL: Nos han dao un Grammy por un tema de 12 minutos.</p>
+            <button>VOTA</button>
+        </div>
+
+        <div class="noticia">
+            <img src="https://www.mondosonoro.com/wp-content/uploads/2018/01/vintage_trouble.jpg" alt="" />
+            <p>
+                Vintage Trouble: Las generaciones que nos escuchan confluyen
+            </p>
+            <button>VOTA</button>
+        </div>
+        <div class="noticia">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQzdj8pnCGtW4QYWOMAVQit-nU-sw6CdDwgQ&usqp=CAU"
+                alt="" />
+            <p>SINIESTRO TOTAL: Nada está bien, pero todo está mal</p>
+            <button>VOTA</button>
+        </div>
+    </div>
+
+    <div class="contenedor">
+        <h2>Iniciar sesión con tu cuenta</h2>
+
+        <form>
+            <fieldset>
+                <legend>Datos</legend>
+                Nombre <input type="text" /><br />
+                Contraseña <input type="password" /><br />
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="contenedor">
+        <h2>¿No tienes una cuenta? ¡Regístrate!</h2>
+
+        <form>
+            <fieldset>
+                <legend>Datos</legend>
+                <p>Nombre <input type="text" /></p> <br />
+                Apellidos<input type="text" /><br />
+                E-mail <input type="email" /><br />
+                Contraseña <input type="password" /><br />
+                Fecha de nacimiento<input type="date" /><br />
+            </fieldset>
+        </form>
+    </div>
+
+    <footer class="pieDePagina">Juan Antonio Amil López, 2021</footer>
 </body>
+
 </html>
