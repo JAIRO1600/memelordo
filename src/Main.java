@@ -29,12 +29,13 @@ public class Main {
             // pintamos ambas imágenes
             Graphics g = combined.getGraphics();
             g.drawImage(qr, 0, 0, ancho, alto, null);
-            g.drawImage(combined, 0, 2, ancho, alto, null);
+            g.drawImage(combined, 0, 0, ancho, alto, null);
             // guardamos ambas imágenes
             ImageIO.write(imagen, formato, fichero);
             ImageIO.write(combined, formato, fusion);
         } catch (IOException e) {
             System.out.println(e.getMessage());
+            System.out.println("Esto es una prueba");
         }
 
     }
